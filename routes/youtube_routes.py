@@ -32,7 +32,7 @@ def youtube_search(query: str = Query(..., description="Enter a title if you don
             'quiet': True,
             'extract_flat': True,
         }
-
+        
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             search_query = f"ytsearch5:{query}"
             info = ydl.extract_info(search_query)
